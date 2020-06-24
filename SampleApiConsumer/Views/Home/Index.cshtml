@@ -1,0 +1,20 @@
+﻿@model IList<CategoryListItem>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@if(Model != null)
+{
+    <table>
+        <tr>
+            <th>Name</th>
+        </tr>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+            </tr>
+        }
+    </table>
+}
